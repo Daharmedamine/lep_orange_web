@@ -1,0 +1,201 @@
+/* Neuropol font */
+@font-face {
+  font-family: "NeuropolX";
+  src: url("/fonts/Neuropol X Bold.TTF") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Background + helpers */
+html,
+body,
+#root {
+  height: 100%;
+}
+:root {
+  --brand: 255, 140, 0;
+}
+body {
+  background: radial-gradient(
+      1200px 600px at 20% -10%,
+      rgba(var(--brand), 0.07),
+      transparent 60%
+    ),
+    #0b0b0b;
+  color: #f4f4f4;
+}
+.title-font {
+  font-family: "NeuropolX", ui-sans-serif, system-ui;
+  letter-spacing: 0.02em;
+}
+
+/* The custom classes your App.tsx uses */
+.nav {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: linear-gradient(
+    to bottom,
+    rgba(24, 24, 24, 0.85),
+    rgba(18, 18, 18, 0.7)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 6px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 4px;
+}
+.nav-link {
+  position: relative;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: #d7d7d7;
+}
+.nav-link:is(:hover, :focus) {
+  color: white;
+}
+.nav-link.is-active {
+  color: black;
+  background: rgba(var(--brand), 1);
+  box-shadow: 0 10px 30px rgba(var(--brand), 0.45);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(
+    180deg,
+    rgba(var(--brand), 1),
+    rgba(220, 120, 0, 1)
+  );
+  color: #111;
+  font-weight: 800;
+  padding: 0.8rem 1rem;
+  border-radius: 14px;
+  box-shadow: 0 20px 34px rgba(var(--brand), 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 24px 40px rgba(var(--brand), 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  color: #f2f2f2;
+  padding: 0.8rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.04)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+.icon-chip {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(var(--brand), 0.18);
+  color: rgb(255, 210, 150);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 10px 25px rgba(var(--brand), 0.2);
+}
+.section-title {
+  font-family: "NeuropolX", ui-sans-serif, system-ui;
+  letter-spacing: 0.01em;
+  font-size: clamp(1.8rem, 1.2rem + 2.2vw, 2.6rem);
+  font-weight: 900;
+  text-shadow: 0 8px 30px rgba(var(--brand), 0.25);
+}
+.scroll-down {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Keep avatars round on odd image ratios */
+img[alt][class*="rounded-full"] {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+/* --- tighten vertical spacing between sections --- */
+/* reduce the big py-24 / lg:py-32 without changing your TSX */
+section.relative {
+  padding-top: 1rem; /* was ~6rem */
+  padding-bottom: 4rem;
+}
+@media (min-width: 1024px) {
+  section.relative {
+    padding-top: 1rem; /* was ~8rem */
+    padding-bottom: 5rem;
+  }
+}
+
+/* reduce the extra gap under each section header (your .mt-10) */
+section.relative .mt-10 {
+  margin-top: 1.05rem !important; /* was 2.5rem (mt-10) */
+}
+
+/* make sure anchored headings don’t hug the top/border when you click nav */
+#about,
+#robot,
+#team,
+#gallery {
+  scroll-margin-top: 92px; /* offset for your fixed nav */
+}
+
+/* add a little breathing room at the very bottom of the page */
+.site-wrapper {
+  padding-bottom: 64px;
+}
+
+/* optional: slightly stronger card shadows so the reduced gaps still feel layered */
+.glass-card {
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+/* Make the Team section start sooner and end sooner */
+#team {
+  padding-top: 3rem !important; /* was ~6–8rem via py-24/lg:py-32 */
+  padding-bottom: 3rem !important;
+}
+
+/* Make the paragraph under the Team title closer to the grid */
+#team .mt-10 {
+  /* this is the container under the subtitle */
+  margin-top: 1rem !important; /* was 2.5rem (mt-10) */
+}
