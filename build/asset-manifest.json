@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.dfe2957f.css",
+    "main.js": "/static/js/main.b6e18f08.js",
+    "static/media/NeuropolXBold.TTF": "/static/media/NeuropolXBold.c0a3c6ccf3ec7398dc3e.TTF",
+    "index.html": "/index.html",
+    "main.dfe2957f.css.map": "/static/css/main.dfe2957f.css.map",
+    "main.b6e18f08.js.map": "/static/js/main.b6e18f08.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dfe2957f.css",
+    "static/js/main.b6e18f08.js"
+  ]
+}

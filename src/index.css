@@ -1,7 +1,7 @@
 /* Neuropol font */
 @font-face {
   font-family: "NeuropolX";
-  src: url("src/fonts/Neuropol X Bold.TTF") format("truetype");
+  src: url("/project/workspace/public/fonts/NeuropolXBold.TTF") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
