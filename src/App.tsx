@@ -20,7 +20,7 @@ const Asher_IMG = "/images/PXL_20250911_195607567.jpg";
 const Franklin_IMG = "/images/PXL_20250915_124102814.MP.jpg";
 const Zavier_IMG = "/images/PXL_20250915_124150078 (1).jpg"; // fixed leading slash
 const Jack_IMG = "/images/PXL_20250916_180914033.jpg"; // fixed leading slash
-const Sebas_IMG = "";
+const Sebas_IMG = "/images/IMG_20250925_201031.jpg";
 const RayanR_IMG = "/images/PXL_20250916_122903643.MP.jpg"; // fixed leading slash
 const Pedro_IMG = "/images/PXL_20250915_123935344 (1).jpg"; // fixed leading slash
 
@@ -56,7 +56,7 @@ const teamMembers = [
   { name: "Zavier Simard", role: "Design", img: Zavier_IMG },
   { name: "Jack Zhang", role: "Automation/ Reach", img: Jack_IMG },
   { name: "Pedro Orcon Romero", role: "Design", img: Pedro_IMG },
-  { name: "Sebastian Breton", role: "Trades", img: TEAM_LOGO },
+  { name: "Sebastian Breton", role: "Trades", img: Sebas_IMG },
   { name: "Ryan Rebiz", role: "Design/ Reach", img: RayanR_IMG },
 ];
 
